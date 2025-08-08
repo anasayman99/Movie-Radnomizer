@@ -1,0 +1,38 @@
+-- Drop tables if they exist
+DROP TABLE IF EXISTS collections;
+DROP TABLE IF EXISTS movies;
+DROP TABLE IF EXISTS users;
+
+-- Create users table
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    genre VARCHAR(50),
+    mood VARCHAR(50),
+    min_runtime INT,
+    max_runtime INT
+);
+
+-- Create movies table
+CREATE TABLE movies (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(150) NOT NULL,
+    genre VARCHAR(50),
+    mood VARCHAR(50),
+    runtime INT
+);
+
+-- Create collections table
+CREATE TABLE collections (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    movie_id INT NOT NULL,
+    added_on DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE
+);
+
+-- Add poster_url coulmn to table movies
+ALTER TABLE movies ADD poster_url VARCHAR(255);

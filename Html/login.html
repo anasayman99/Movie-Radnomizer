@@ -1,0 +1,78 @@
+<!-- login.html -->
+<!-- HTML Document for Movie Randomizer Login Page -->
+<!-- This file serves as the login page for the Movie Randomizer application -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <!-- Link to shared stylesheet -->
+  <link rel="stylesheet" href="../Styles/style.css">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="start-nav" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html" class="cta-btn">🏠 Home</a></li>
+        <li><a href="register.html" class="cta-btn">🔐 Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Banner Section -->
+  <section class="hero">
+    <img src="../Images/hero.jpg" alt="Hero Image" class="hero-bg">
+    <div class="hero-text">🔐 Login to Movie Randomizer</div>
+  </section>
+
+  <!-- Login Form Card -->
+  <main id="main-login">
+    <div class="main-card">
+      <section class="login-section card">
+        <header>
+          <h2 class="text-center">🔐 Login</h2>
+        </header>
+
+        <!-- Login form -->
+        <form action="../Server/login.php" method="POST" aria-label="Login Form">
+
+          <!-- Username input -->
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+            <span class="error-message" id="username-error"></span>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            <span class="error-message" id="password-error"></span>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" id="login-btn">Login</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer Call-to-Action -->
+  <footer class="cta-footer">
+    <img src="../Images/footer.jpg" alt="Footer Background" class="cta-bg">
+    <div class="cta-overlay">
+      <p>Glad to have you!</p>
+    </div>
+  </footer>
+
+  <!-- Link to JS login validation -->
+  <script src="../Js/login.js"></script>
+
+</body>
+
+</html>

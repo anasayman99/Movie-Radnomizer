@@ -1,0 +1,142 @@
+<!-- register.html -->
+<!-- HTML Document for Movie Randomizer Registration Page -->
+<!-- This file serves as the registration page for the Movie Randomizer application -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <!-- Link to main stylesheet -->
+  <link rel="stylesheet" href="../Styles/style.css">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="start-nav" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html" class="cta-btn">🏠 Home</a></li>
+        <li><a href="login.html" class="cta-btn">🔐 Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="../Images/hero.jpg" alt="Hero Image" class="hero-bg">
+    <div class="hero-text">📝 Create Your Movie Randomizer Account</div>
+  </section>
+
+  <!-- Registration Form -->
+  <main>
+    <div class="main-card">
+      <section class="registration-section">
+        <header>
+          <h2 class="text-center">👤 Register</h2>
+        </header>
+
+        <!-- Registration Form -->
+        <form action="../Server/register.php" method="POST" id="registerForm" aria-label="Registration Form">
+
+          <!-- Username Field -->
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+            <div class="error-message"></div>
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email">
+            <div class="error-message"></div>
+          </div>
+
+          <!-- Password Field -->
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            <div class="error-message"></div>
+          </div>
+
+          <!-- Confirm Password Field -->
+          <div class="form-group">
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" id="confirm_password" name="confirm_password">
+            <div class="error-message"></div>
+          </div>
+
+          <!-- Genre Dropdown -->
+          <div class="form-group">
+            <label for="genre">Preferred Genre</label>
+            <select id="genre" name="genre">
+              <option value="Action">Action</option>
+              <option value="Drama">Drama</option>
+              <option value="Animation">Animation</option>
+              <option value="Thriller">Thriller</option>
+              <option value="Sci-Fi">Sci-Fi</option>
+              <option value="Romance">Romance</option>
+              <option value="Comedy">Comedy</option>
+              <option value="Crime">Crime</option>
+              <option value="Family">Family</option>
+              <option value="War">War</option>
+              <option value="Adventure">Adventure</option>
+              <option value="Horror">Horror</option>
+              <option value="Biography">Biography</option>
+            </select>
+            <div class="error-message"></div>
+          </div>
+
+          <!-- Mood Dropdown -->
+          <div class="form-group">
+            <label for="mood">Preferred Mood</label>
+            <select id="mood" name="mood">
+              <option value="Mind-Bending">Mind-Bending</option>
+              <option value="Chill">Chill</option>
+              <option value="Exciting">Exciting</option>
+              <option value="Tense">Tense</option>
+              <option value="Feel-Good">Feel-Good</option>
+            </select>
+            <div class="error-message"></div>
+          </div>
+
+          <!-- Min Runtime -->
+          <div class="form-group">
+            <label for="min_runtime">Min Runtime</label>
+            <input type="number" id="min_runtime" name="min_runtime">
+            <div class="error-message"></div>
+          </div>
+
+          <!-- Max Runtime -->
+          <div class="form-group">
+            <label for="max_runtime">Max Runtime</label>
+            <input type="number" id="max_runtime" name="max_runtime">
+            <div class="error-message"></div>
+          </div>
+
+          <!-- Form Buttons -->
+          <div class="register-btns">
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer Call-to-Action -->
+  <footer class="cta-footer">
+    <img src="../Images/footer.jpg" alt="Footer Background" class="cta-bg">
+    <div class="cta-overlay">
+      <p>Begin the movie magic!</p>
+    </div>
+  </footer>
+
+  <!-- Link to JS validation script -->
+  <script src="../Js/register.js"></script>
+</body>
+
+</html>

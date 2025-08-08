@@ -1,0 +1,160 @@
+/*
+This is the CSS file for the spin the wheel feature and page.
+It styles the wheel, buttons, and movie card elements.
+*/
+
+body {
+  background-color: #121212;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  color: #fff;
+}
+.wheel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.wheel {
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wheel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Enforce circular clipping on image */
+}
+
+.red-button {
+  text-decoration: none;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.red-button:hover {
+  background-color: #b00610;
+}
+.movie-card {
+  background: linear-gradient(145deg, #1c1c1c, #232323);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px 40px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  animation: slideUp 0.6s ease;
+  display: none;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  
+}
+
+.movie-title-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  width: 100%;
+  text-align: left;
+}
+
+.movie-title-row h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #fff;
+}
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  align-items: flex-start;
+}
+.movie-detail-row {
+  display: flex;
+
+  font-size: 1.2rem;
+  color: #eee;
+  width: 100%;
+  align-items: center;
+  gap: 16px;
+  background: var(--color-card);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.icon {
+  font-size: 1.3rem;
+}
+.label {
+  font-weight: bold;
+  color: #ccc;
+  min-width: 90px;
+}
+.value {
+  color: #fff;
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.movie-poster {
+  width: 280px;         
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 16px;
+  transition: opacity 0.3s ease-in-out;
+}
+.movie-poster:hover {
+  transition: 0.3s ease-in-out;
+  transform: scale(2);
+}
+
+.spin-button-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.spin-button-container .red-button {
+  width: 220px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
